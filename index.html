@@ -105,8 +105,8 @@ var corpus = new Array();
             bigOlCorpus = data.split('\n');
         });
 function generateRandomSample() {
-    var min = 1930,
-        max = 1990,
+    var min = 1901,
+        max = 2000,
         finalNumber = Math.floor(Math.random() * (max - min) + min);
     var listOfWords = bigOlCorpus;
     var finalWord = listOfWords[Math.floor(Math.random() * listOfWords.length)];
