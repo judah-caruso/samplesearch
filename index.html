@@ -21,13 +21,69 @@
     body{
         font-family: 'Roboto', sans-serif;
     }
+    .wrapper{
+        flex-flow: wrap;
+        padding: 10vh 15vw 0
+    }
+    .area {
+        display: flex;
+        flex-flow: wrap;
+        padding: 2vh 15vw 0
+    }
+    .titlearea {
+        flex-flow: wrap;
+        padding: 0vh 15vw 0
+    }
+    .generate{
+        order: 0;
+        min-width: 10vw;
+        min-height: 5vh;
+        margin: auto;
+        background-color: #f24848;
+        border-color: #f24848;
+        border-radius: 5px;
+        color: white;
+        font-size: 1em;
+    }
+    .generate:hover{
+        background-color: #c64949;
+        border-color: #c64949;
+    }
+    .sample {
+        order: 1;
+        width: 40vw;
+        height: 6vh;
+        font-size: 40px;
+        margin: auto;
+        text-align: center;
+    }
+    .youtube{
+        order: 2;
+        margin: auto;
+        text-decoration: none;
+    }
+    .title{
+        padding:0px;
+        text-align: center;
+    }
 </style>
 </head>
 
 <body>
-  <button onclick="generateRandomSample()">generate some shit</button>
-  <input type="text" name="sample" id="box"><br />
-  <a id="searchButton" href="" target="_blank">Search YouTube</a>
+<div class="wrapper">
+    <div class="titlearea">
+        <h1 class="title">sample search</h1>
+    </div>
+    <div class="area">
+      <button class="generate" onclick="generateRandomSample()">GENERATE</button>
+    </div>
+    <div class="area">
+      <input type="text" class="sample" name="sample" id="box">
+    </div>
+    <div class="area">
+      <a id="searchButton" class="youtube" href="" target="_blank">search youtube</a>
+    </div>
+</div>
 </body>
   
   <script>
