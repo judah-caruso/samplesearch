@@ -1,14 +1,33 @@
 <html>
 <head>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:900' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <title>sample search</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="keywords" content="sample search" />
+    <meta name="description" content="sample search" />
+    <meta property="og:title" content="sample search" />
+    <meta property="og:type" content="website" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<style>
+    body{
+        font-family: 'Roboto', sans-serif;
+    }
+</style>
 </head>
+
 <body>
-<h1> samplesearch </h1>
   <button onclick="generateRandomSample()">generate some shit</button>
   <input type="text" name="sample" id="box"><br />
   <a id="searchButton" href="" target="_blank">Search YouTube</a>
-  <br />
-  <small>using <a href="https://github.com/zeke/an-array-of-english-words/" target="_blank">Zeke's array of english words.</small>
 </body>
   
   <script>
@@ -23,10 +42,7 @@ function generateRandomSample() {
     var listOfWords = bigOlCorpus;
     var finalWord = listOfWords[Math.floor(Math.random() * listOfWords.length)];
     document.getElementById("box").value = finalWord + ' ' + finalNumber;
-
     $( "#searchButton" ).attr( 'href', 'https://www.youtube.com/results?search_query=' + finalWord + '+' + finalNumber);
 };
-
-</script>
-
+    </script>
 </html>
