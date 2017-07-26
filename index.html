@@ -6,7 +6,7 @@
 <h1> samplesearch </h1>
   <button onclick="generateRandomSample()">generate some shit</button>
   <input type="text" name="sample" id="box"><br />
-  <a id="fuckface" href="" target="_blank">Search YouTube</a>
+  <a id="YouTubeSearch" href="" target="_blank">Search YouTube</a>
   <br />
   <small>using <a href="https://github.com/zeke/an-array-of-english-words/" target="_blank">Zeke's array of english words.</small>
 </body>
@@ -24,7 +24,7 @@ function generateRandomSample() {
     var finalWord = listOfWords[Math.floor(Math.random() * listOfWords.length)];
     document.getElementById("box").value = finalWord + ' ' + finalNumber;
 
-    $( "#fuckface" ).attr( 'href', 'https://www.youtube.com/results?search_query=' + finalWord + '+' + finalNumber);
+    $( "#YouTubeSearch" ).attr( 'href', 'https://www.youtube.com/results?search_query=' + finalWord + '+' + finalNumber);
 };
 
 </script>
