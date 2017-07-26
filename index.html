@@ -20,6 +20,7 @@
 <style>
     body{
         font-family: 'Roboto', sans-serif;
+        background-color: ;
     }
     .wrapper{
         flex-flow: wrap;
@@ -28,7 +29,7 @@
     .area {
         display: flex;
         flex-flow: wrap;
-        padding: 3vh 15vw 0
+        padding: 4vh 15vw 0
     }
     .titlearea {
         flex-flow: wrap;
@@ -44,6 +45,7 @@
         border-radius: 5px;
         color: white;
         font-size: 1em;
+        font-family: 'Roboto', sans-serif;
     }
     .generate:hover{
         background-color: #c64949;
@@ -52,7 +54,7 @@
     .sample {
         order: 1;
         width: 40vw;
-        height: 7vh;
+        height: 6vh;
         font-size: 40px;
         margin: auto;
         text-align: center;
@@ -63,8 +65,15 @@
         text-decoration: none;
     }
     .title{
+        font-size: 2em;
         padding:0px;
         text-align: center;
+    }
+    .sub{
+        font-size: 1em;
+        padding:0px;
+        text-align: center;
+        color: #a5a5a5;
     }
 </style>
 </head>
@@ -72,7 +81,8 @@
 <body>
 <div class="wrapper">
     <div class="titlearea">
-        <h1 class="title">sample search</h1>
+        <div class="title">sample search</div>
+        <div class="sub">generates some shitty obscure thing</div>
     </div>
     <div class="area">
       <button class="generate" onclick="generateRandomSample()">GENERATE</button>
