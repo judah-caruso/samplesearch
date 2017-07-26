@@ -3,13 +3,11 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 <body>
-<h1> samplesearch </h1>
-  <button onclick="generateRandomSample()">generate some sick sample shit</button>
+<h1> sss </h1>
+  <button onclick="generateRandomSample()">generate some shit</button>
   <input type="text" name="sample" id="box"><br />
 
-  <form action="https://www.youtube.com/results?search_query=" + finalWord + finalNumber;>
-      <input type="submit" value="Search YouTube">
-  </form>
+  <button id="fuckface" href="">Search YouTube</button>
 </body>
   
   <script>
@@ -24,6 +22,7 @@ function generateRandomSample() {
     var listOfWords = bigOlCorpus;
     var finalWord = listOfWords[Math.floor(Math.random() * listOfWords.length)];
     document.getElementById("box").value = finalWord + ' ' + finalNumber;
+    document.getElementById("fuckface").href = 'https://www.youtube.com/results?search_query=' + finalWord + finalNumber;
 };
 </script>
 
