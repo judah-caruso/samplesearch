@@ -3,7 +3,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 <body>
-<h1> SUCK MY DICK </h1>
+<h1> SUCK </h1>
   <button onclick="generateRandomYear()">GENERATE YEAR</button>
   <input type="text" name="year" id="yearbox"><br />
   <button onclick="generateRandomWord()">GENERATE WORD</button>
@@ -18,11 +18,13 @@ function generateRandomYear() {
     document.getElementById("yearbox").value = finalNumber;
 };
 
+var corpus = new Array();
+    $.get('originals.txt', function(data){
+            bigOlCorpus = data.split('\n');
+        });
+
 function generateRandomWord(){
-      $.get("originals.txt", function(data) {
-      var words = data.split(/\n/);
-  });
-    var listOfWords = words;
+    var listOfWords = bigOlCorpus;
     var finalWord = listOfWords[Math.floor(Math.random() * listOfWords.length)];
     document.getElementById("wordbox").value = finalWord;
     };
