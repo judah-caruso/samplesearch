@@ -15,14 +15,12 @@ function generateRandomYear() {
     var min = 1930,
         max = 1990,
         finalNumber = Math.floor(Math.random() * (max - min) + min);
-    document.getElementById("yearbox").value = finalNumber;
+    document.getElementById("yearbox").value = finalNumber + ' ' + finalWord;
 };
-
 var corpus = new Array();
     $.get('originals.txt', function(data){
             bigOlCorpus = data.split('\n');
         });
-
 function generateRandomWord(){
     var listOfWords = bigOlCorpus;
     var finalWord = listOfWords[Math.floor(Math.random() * listOfWords.length)];
