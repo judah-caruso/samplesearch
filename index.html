@@ -3,11 +3,11 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 <body>
-<h1> statea </h1>
+<h1> samplesearch </h1>
   <button onclick="generateRandomSample()">generate some shit</button>
   <input type="text" name="sample" id="box"><br />
 
-  <a id="fuckface" href="">Search YouTube</a>
+  <button id="fuckface" href="" target="_blank">Search YouTube</button>
 </body>
   
   <script>
@@ -23,7 +23,7 @@ function generateRandomSample() {
     var finalWord = listOfWords[Math.floor(Math.random() * listOfWords.length)];
     document.getElementById("box").value = finalWord + ' ' + finalNumber;
 
-    $( "#fuckface" ).attr( 'href', 'https://www.youtube.com/results?search_query=' + finalWord + finalNumber);
+    $( "#fuckface" ).attr( 'href', 'https://www.youtube.com/results?search_query=' + finalWord + '+' + finalNumber);
 };
 
 </script>
