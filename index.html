@@ -1,17 +1,31 @@
 <html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
 <body>
 <h1> SUCK MY DICK </h1>
-  <button onclick="generateRandomNumber()">GENERATE</button>
+  <button onclick="generateRandomYear()">GENERATE YEAR</button>
+  <input type="text" name="year" id="yearbox"><br />
+  <button onclick="generateRandomWord()">GENERATE WORD</button>
+  <input type="text" name="word" id="wordbox">
 </body>
   
   <script>
-function generateRandomNumber() {
-    var min = 0.0200,
-        max = 0.120,
-        highlightedNumber = Math.random() * (max - min) + min;
-
-    alert(highlightedNumber);
+function generateRandomYear() {
+    var min = 1930,
+        max = 1990,
+        finalNumber = Math.floor(Math.random() * (max - min) + min);
+    document.getElementById("yearbox").value = finalNumber;
 };
-  </script>
+
+function generateRandomWord(){
+      $.get("originals.txt", function(data) {
+      var words = data.split(/\n/);
+  });
+    var listOfWords = words;
+    var finalWord = listOfWords[Math.floor(Math.random() * listOfWords.length)];
+    document.getElementById("wordbox").value = finalWord;
+    };
+</script>
 
 </html>
