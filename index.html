@@ -1,10 +1,18 @@
 <html>
-<!--     SHAMELESS PLUG: https://soundcloud.com/madebyk -->
+<!--     SHAMELESS PLUG: https://soundcloud.com/madebyk                             -->
+<!--     Patch Notes: 9/20/17                                                       -->
+<!--     + Gave the site some flair with a nice new textured cool ass background.   -->
+<!--     + Added 400 new words to the main corpus.                                  -->
+<!--     + Added promo for my latest website RhythmHQ.                              -->
+<!--     ! Added some metadata which may or may not fix a few things.               -->
 <head>
     <link href='https://fonts.googleapis.com/css?family=Roboto:900' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <title>sample search</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="description" content="Search for samples in the depths of YouTube!">
+    <meta name="keywords" content="sample,sampling,music,production">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -31,7 +39,7 @@
 <style>
     body{
         font-family: 'Roboto', sans-serif;
-        background-color: ;
+        background-image: url(geometry.png);
     }
     .wrapper{
         flex-flow: wrap;
@@ -86,6 +94,16 @@
         text-align: center;
         color: #a5a5a5;
     }
+    .alt{
+        font-size: 1em;
+        text-align: center;
+        position:flex;
+        margin: 0 auto;
+        text-transform: lowercase;
+    }
+    .alt a{
+        text-decoration: none;
+    }
 </style>
 </head>
     
@@ -94,6 +112,7 @@
     <div class="titlearea">
         <div class="title">sample search</div>
         <div class="sub">generates some shitty obscure thing</div>
+        <div class="sub" style="font-size: small;">(now with a fancy background)</div>
     </div>
     <div class="area">
       <button class="generate" onclick="generateRandomSample()">GENERATE</button>
@@ -104,10 +123,11 @@
     <div class="area">
       <a id="searchButton" class="youtube" href="" target="_blank">search youtube</a>
     </div>
+    <div class="area">
+    <span class="alt">Are you an artist or just want to discover some new music? <br />Come check out <a href="http://rhythmhq.live/" target="_blank">RhythmHQ!</a></span>
+    </div>
 </div>
 </body>
-    
-<!-- STOP LOOKING AT THIS PLEASE. I'M SHIT AT JAVASCRIPT -->
     
   <script>
 var corpus = new Array();
