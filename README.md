@@ -1,2 +1,4 @@
 # sample-search-generator
-generates a year and a random word to give ideas for sampling
+Generates a year and a random word, then puts that into a youtube search query.
+
+![site](screenshot.png?raw=true)
