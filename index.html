@@ -30,6 +30,8 @@
     <link rel="shortcut icon" href="./favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="sweetalert2.all.min.js"></script>
+    <link rel="sweetalert2.css">
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -43,7 +45,7 @@
     <style>
         body{
             font-family: 'Roboto', sans-serif;
-            background-image: url(geometry.png);
+            background-image: url(bg2.png);
         }
         .wrapper{
             flex-flow: wrap;
@@ -92,11 +94,27 @@
             padding:0px;
             text-align: center;
         }
+        .title:hover{
+            cursor: hand;
+        }
         .sub{
             font-size: 1em;
             padding:0px;
             text-align: center;
             color: #a5a5a5;
+        }
+        .subsub{
+            font-size: 1em;
+            font-style: italic;
+            padding:0px;
+            text-align: center;
+            color: #a5a5a5;
+        }
+        a, a:visited {
+            color: #f24848;
+        }
+        a:hover{
+            color: #c64949;
         }
         .alt{
             font-size: 1em;
@@ -119,6 +137,18 @@
             display: block !important;
             padding-top: 8vh;
         }
+        .scrollBox{
+         background-color: #f2f2f2;
+         max-height:250px;
+         overflow: scroll;
+         overflow-x: hidden;
+         margin:0 auto;
+        }
+        duper{
+            vertical-align: super;
+            font-size: small;
+            color: #a5a5a5;
+        }
 
     </style>
 </head>
@@ -126,9 +156,8 @@
 <body>
 <div class="wrapper">
     <div class="titlearea">
-        <div class="title">sample search</div>
+        <div class="title"><span onclick="updatePop()">sample search<duper>v1.6</duper></span></div>
         <div class="sub">generates some shitty obscure thing</div>
-        <div class="sub" style="font-size: small;">(now with ads because i have no money)</div>
     </div>
     <div class="area">
       <button class="generate" onclick="generateRandomSample()">GENERATE</button>
@@ -145,7 +174,15 @@
 </div>
 <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=1e35e253-3948-49c4-865d-1e276cdab315"></script>
 </body>
-    
+    <script>
+        function updatePop(){
+            swal({
+                confirmButtonText: "damn",
+                confirmButtonColor: "#f24848",
+                html: "now with 32,339 words! <br /> <small>(and ads because PAPA'S GOTTA EAT BABYYYYY)</small>"
+            }
+        )};
+    </script>
   <script>
 var corpus = new Array();
     $.get('newlist.txt', function(data){
