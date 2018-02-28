@@ -187,6 +187,13 @@
             font-size: small;
             color: #a5a5a5;
         }
+        .contact {
+            text-align: center;
+            display: block;
+            font-size: 0.8em;
+            padding: 5px;
+            color: #a5a5a5;
+        }
 
     </style>
 </head>
@@ -196,6 +203,7 @@
     <div class="titlearea">
         <div class="title"><span onclick="updatePop()">sample search<duper>v1.9<duper></span></div>
         <div class="sub">generates some obscure thing</div>
+        <span class="contact">contact: judah[at]sampled.pro</span>
     </div>
     <div class="area">
       <button class="generate" onclick="generateRandomSample()">GENERATE</button>
@@ -204,7 +212,7 @@
       <input type="text" class="sample" name="sample" id="box" readonly="true">
     </div>
     <div class="area">
-      <a id="searchButton" class="youtube" href="" target="_blank">search youtube</a>
+        <a id="searchButton" class="youtube" href="" target="_blank">search youtube</a>
     </div>
 </div>
     <div class="footer-area">
@@ -217,7 +225,7 @@
             swal({
                 confirmButtonText: "Oh, alright...",
                 confirmButtonColor: "#f24848",
-                html: "I know ads suck, but they help!"
+                html: "I know ads suck, but they help me out! <br/><i><small>You're probably using adblock anyway...</small></i>"
             }
         )};
     </script>
