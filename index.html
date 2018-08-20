@@ -1,18 +1,26 @@
 <html>
-<!--     SHAMELESS PLUG: https://soundcloud.com/madebyk                             		-->
-<!--	 Patch Notes: 12/20/17 (TextMessage)					    		-->
-<!--	 - Removed the word "shitty" from the tagline to make the site more "family friendly."  -->
-<!--	 - Removed plugs for my other projects (besides the shameless plug above this). 	-->
-<!--	 ! Made the "funny" popup look less like shit, because it looked pretty bad.		-->
-<!--     Patch Notes: 11/06/17 (TobaccoPlant)                                       		-->
-<!--     + Added amazon for testing. May be removed in the future.                  		-->
-<!--     + Added a nice new slogan about my lack of financial abundance. (lol)      		-->
-<!--     ! Replaced RhythmHQ promo for personal site promo.                         		-->
-<!--     Patch Notes: 9/20/17 (FancyFeet)                                           		-->
-<!--     + Gave the site some flair with a nice new textured cool ass background.   		-->
-<!--     + Added 400 new words to the main corpus.                                  		-->
-<!--     + Added promo for my latest website RhythmHQ.                              		-->
-<!--     ! Added some metadata which may or may not fix a few things.               		-->
+<!--    SHAMELESS PLUG: https://soundcloud.com/madebyk                                           -->
+<!--    Patch Notes: 8/19/18 (StillAlive)                                                        -->
+<!--    + Added Korean!                                                                          -->
+<!--    + Added Italian!                                                                         -->
+<!--    + Added more Japanese!                                                                   -->
+<!--    ! Changed tagline to "generates obscure things"! That's right, we're global now.         -->
+<!--    ! Fixed infinitely opening new tabs bug.                                                 -->
+<!--    ! Fixed element resizing on smaller devices.                                             -->
+<!--    - Removed background image (for now).                                                    -->
+<!--    Patch Notes: 12/20/17 (TextMessage)                                                      -->
+<!--    - Removed the word "shitty" from the tagline to make the site more "family friendly."    -->
+<!--    - Removed plugs for my other projects (besides the shameless plug above this).           -->
+<!--    ! Made the "funny" popup look less like shit, because it looked pretty bad.              -->
+<!--    Patch Notes: 11/06/17 (TobaccoPlant)                                                     -->
+<!--    + Added amazon for testing. May be removed in the future.                                -->
+<!--    + Added a nice new slogan about my lack of financial abundance. (lol)                    -->
+<!--    ! Replaced RhythmHQ promo for personal site promo.                                       -->
+<!--    Patch Notes: 9/20/17 (FancyFeet)                                                         -->
+<!--    + Gave the site some flair with a nice new textured cool ass background.                 -->
+<!--    + Added 400 new words to the main corpus.                                                -->
+<!--    + Added promo for my latest website RhythmHQ.                                            -->
+<!--    ! Added some metadata which may or may not fix a few things.                             -->
 <head>
     <link href='https://fonts.googleapis.com/css?family=Roboto:900' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -70,9 +78,16 @@
 
     </script>
     <style>
+        @media only screen and (max-width: 560px) {
+            duper{
+                display: block !important;
+                position: relative !important;
+            }
+        }
         body{
             font-family: 'Roboto', sans-serif;
-            background-image: url(bg2.png);
+            background-color: #FAFAFA;
+            /*background-image: url(bg2.png);*/
         }
         .wrapper{
             flex-flow: wrap;
@@ -91,7 +106,7 @@
         }
         .titlearea {
             flex-flow: wrap;
-            padding: 0vh 15vw 0
+            padding: 0vh 5vw 0
         }
         .generate{
             order: 0;
@@ -178,6 +193,8 @@
          margin:0 auto;
         }
         duper{
+            display: inline-flex;
+            position: absolute;
             vertical-align: super;
             font-size: small;
             color: #a5a5a5;
@@ -201,8 +218,8 @@
 <body>
 <div class="wrapper">
     <div class="titlearea">
-        <div class="title"><span onclick="updatePop()">sample search<duper>v1.9<duper></span></div>
-        <div class="sub">generates some obscure thing</div>
+        <div class="title"><span onclick="updatePop()">sample search<duper>v2.0<duper></span></div>
+        <div class="sub">generates obscure things!</div>
         <span class="contact">contact: judah[at]sampled.pro</span>
     </div>
     <div class="area">
@@ -212,7 +229,7 @@
       <input type="text" class="sample" name="sample" id="box" readonly="true">
     </div>
     <div class="area">
-        <a id="searchButton" class="youtube" href="" target="_blank">search youtube</a>
+        <a id="searchButton" class="youtube" href="" >search youtube</a>
     </div>
 </div>
     <div class="footer-area">
@@ -223,25 +240,27 @@
     <script>
         function updatePop(){
             swal({
-                confirmButtonText: "Oh, alright...",
+                confirmButtonText: "Okay",
                 confirmButtonColor: "#f24848",
-                html: "I know ads suck, but they help me out! <br/><i><small>You're probably using adblock anyway...</small></i>"
+                html: "<span style='font-weight: 400'>Ads suck, but I gotta keep the lights on!</span>"
             }
         )};
     </script>
   <script>
-var corpus = new Array();
-    $.get('newlist.txt', function(data){
-            bigOlCorpus = data.split('\n');
+        var corpus = new Array();
+        var min = 1930, max = 1990;
+        if ( $("box".value === "") ){ 
+            $("#searchButton").attr( 'href', '#ClickGenerateFirst'); 
+        }
+        $.get('newlist.txt', function(data){ 
+            bigOlCorpus = data.split('\n'); 
         });
-function generateRandomSample() {
-    var min = 1930,
-        max = 1990,
-        finalNumber = Math.floor(Math.random() * (max - min) + min);
-    var listOfWords = bigOlCorpus;
-    var finalWord = listOfWords[Math.floor(Math.random() * listOfWords.length)];
-    document.getElementById("box").value = finalWord + ' ' + finalNumber;
-    $( "#searchButton" ).attr( 'href', 'https://www.youtube.com/results?search_query=' + finalWord + '+' + finalNumber);
-};
+        function generateRandomSample() {
+            var listOfWords = bigOlCorpus;
+            var finalNumber = Math.floor(Math.random() * (max - min) + min);
+            var finalWord = listOfWords[Math.floor(Math.random() * listOfWords.length)];
+            document.getElementById("box").value = finalWord + ' ' + finalNumber;
+            $( "#searchButton" ).attr( 'href', 'https://www.youtube.com/results?search_query=' + finalWord + '+' + finalNumber).attr( 'target', '_blank');
+        };
     </script>
 </html>
