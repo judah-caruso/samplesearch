@@ -1,5 +1,9 @@
 <html>
-<!--    SHAMELESS PLUG: https://soundcloud.com/madebyjudah                                       -->
+<!--    Patch Notes: 6/9/19 (Here)                                                               -->
+<!--    ! Changed the year range from 1930-1990 to 1900-2000                                     -->
+<!--    ! Changed the contact email (inactive) to some of my social media links.                 -->
+<!--    - Removed ads! (finally)                                                                 -->
+<!--    - Removed the easter egg when you clicked on the version number.                         -->
 <!--    Patch Notes: 8/19/18 (StillAlive)                                                        -->
 <!--    + Added Korean!                                                                          -->
 <!--    + Added Italian!                                                                         -->
@@ -218,9 +222,9 @@
 <body>
 <div class="wrapper">
     <div class="titlearea">
-        <div class="title"><span onclick="updatePop()">sample search<duper>v2.0<duper></span></div>
+        <div class="title"><span>sample search<duper>v2.1</duper></span></div>
         <div class="sub">generates obscure things!</div>
-        <span class="contact">contact: judah[at]sampled.pro</span>
+        <span class="contact"><a href="http://0px.moe">Blog</a>, <a href="https://soundcloud.com/madebyjudah">SoundCloud</a></span>
     </div>
     <div class="area">
       <button class="generate" onclick="generateRandomSample()">GENERATE</button>
@@ -232,28 +236,10 @@
         <a id="searchButton" class="youtube" href="" >search youtube</a>
     </div>
 </div>
-    <div class="footer-area">
-        <script type="text/javascript">
-            var ad_idzone = "2930254",
-                 ad_width = "728",
-                 ad_height = "90";
-        </script>
-        <script type="text/javascript" src="https://ads.exdynsrv.com/ads.js"></script>
-        <noscript><a href="https://main.exdynsrv.com/img-click.php?idzone=2930254" target="_blank"><img src="https://syndication.exdynsrv.com/ads-iframe-display.php?idzone=2930254&output=img&type=728x90" width="728" height="90"></a></noscript>
-    </div>
 </body>
-    <script>
-        function updatePop(){
-            swal({
-                confirmButtonText: "Okay",
-                confirmButtonColor: "#f24848",
-                html: "<span style='font-weight: 400'>Ads suck, but I gotta keep the lights on!</span>"
-            }
-        )};
-    </script>
   <script>
         var corpus = new Array();
-        var min = 1930, max = 1990;
+        var min = 1900, max = 2000;
         if ( $("box".value === "") ){ 
             $("#searchButton").attr( 'href', '#ClickGenerateFirst'); 
         }
